@@ -3,8 +3,10 @@ import profile_pic from '../../assets/images/profile-pic.jpg'
 const Profile = () => {
     return (
         <div className="flex items-center font-josefin justify-center">
-            <img src={profile_pic} alt="profile" className="w-3/12 mr-16 border-dark-green border-4 rounded-lg"/>
+            <img src={profile_pic} alt="profile" className="w-4/12 mr-16 border-dark-green border-4 rounded-lg"/>
             <div className="text-left w-5/12">
+                <h1 className="font-bebas text-3xl">About Me</h1>
+                <br />
                 <p>Welcome to my page!</p>
                 <br />
                 <p>
@@ -17,7 +19,7 @@ const Profile = () => {
                 <br />
                 <p>
                     Outside of work, I enjoy playing music with my friends. I am currently working on the electric guitar but I also love sitting down
-                    at my keyboard when I have time. I try and get out and see live concerts as well. I have been really enjoying the Boston music scene.
+                    at my keyboard when I have time. I try and get out and see live concerts as well. I have been really enjoying the Boston music scene!
                     I also enjoy watching movies when I have the time. Feel free to check out my LetterBoxd!
                 </p>
             </div>
