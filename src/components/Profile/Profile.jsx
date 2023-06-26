@@ -3,7 +3,7 @@ import profile_pic from '../../assets/images/profile-pic.jpg'
 const Profile = () => {
     return (
         <div className="flex items-center font-josefin justify-center">
-            <img src={profile_pic} alt="profile" className="w-4/12 mr-16 border-dark-green border-4 rounded-lg"/>
+            <img src={profile_pic} alt="profile" className="w-4/12 mr-16 border-black border-4 rounded-lg"/>
             <div className="text-left w-5/12">
                 <h1 className="font-bebas text-3xl">About Me</h1>
                 <br />
