@@ -1,14 +1,14 @@
 
 function Experience(props) {
-    const company = props.company
     const title = props.title
+    const subtitle = props.subtitle
     const description = props.description
 
     return (
-        <div>
+        <div className="pt-4">
             <span className="flex items-end space-x-2">
-                <h2 className="font-bebas text-2xl">{company}</h2>
-                <h2 className="font-josefin">{title}</h2>
+                <h2 className="font-bebas text-2xl">{title}</h2>
+                <h2 className="font-josefin">{subtitle}</h2>
             </span>
             {description}
         </div>

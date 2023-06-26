@@ -30,9 +30,9 @@ const ProfessionalExperience = () => {
     return (
         <div className="text-left px-16 divide-y divide-black">
             <h1 className="font-bebas text-3xl">Professional Experience</h1>
-            <div className = "projects pt-2 space-y-4 divide-y">
-                <Experience company="Slalom Consulting" title="Associate Consultant" description={SlalomDescription}/>
-                <Experience company="Federal Reserve Board" title="Software Engineering Intern" description={FedDescription}/>
+            <div className = "projects space-y-4 divide-y">
+                <Experience title="Slalom Consulting" subtitle="Associate Consultant" description={SlalomDescription}/>
+                <Experience title="Federal Reserve Board" subtitle="Software Engineering Intern" description={FedDescription}/>
             </div>
         </div>
     );
