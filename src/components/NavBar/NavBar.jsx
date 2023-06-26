@@ -5,7 +5,7 @@ const NavBar = () => {
             <div className = "text-2xl " >Sarah Moreland</div>
             <div className = "flex justify-between gap-x-4">
               <a href="/">About Me</a>
-              <a href="/">Projects</a>
+              <a href="/projects">Experience</a>
               <a href="/">Contact</a>
             </div>
       </nav>
