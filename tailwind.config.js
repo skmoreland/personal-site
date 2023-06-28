@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     fontFamily: {
-      bebas: ['Bebas Neue', 'Helvetica', 'Arial','sans-serif'],
-      josefin: ['Josefin Sans','sans-serif'],
+      title: ['Bebas Neue', 'Helvetica', 'Arial','sans-serif'],
+      body: ['Oswald','sans-serif'],
     },
     extend: {
       colors: {
