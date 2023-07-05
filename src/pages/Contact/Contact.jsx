@@ -13,13 +13,16 @@ function Contact() {
                 <div className="flex justify-center -mt-8 -ml-4 -mb-8">
                     <img src={envelope} alt="envelope" className="min-w-[200px] w-1/12"/>
                 </div>
-                <a href="mailto: skmoreland217@gmail.com" 
+                <a 
+                    className="hover:text-prime-blue"
+                    href="mailto: skmoreland217@gmail.com" 
                     target="_blank" 
                     rel="noreferrer noopener"><
                         b>Email: </b>
                 </a> 
                 <h1>skmoreland217@gmail.com</h1>
                 <a 
+                    className="hover:text-prime-blue"
                     href="https://drive.google.com/file/d/1psZgsl_YYvjiCixZb_HQGBsSHw44ZYd6/view" 
                     target="_blank" 
                     rel="noreferrer noopener">
@@ -27,6 +30,7 @@ function Contact() {
                 </a>
                 <br/>
                 <a 
+                    className="hover:text-prime-blue"
                     href="https://www.linkedin.com/in/sarah-moreland-63754b19a/" 
                     target="_blank" 
                     rel="noreferrer noopener">
@@ -34,6 +38,7 @@ function Contact() {
                 </a>
                 <br/>
                 <a 
+                    className="hover:text-prime-blue"
                     href="https://github.com/skmoreland" 
                     target="_blank" 
                     rel="noreferrer noopener">
