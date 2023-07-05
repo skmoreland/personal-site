@@ -30,7 +30,7 @@ const SentenceEmbeddingDescription =
 
 const CodingProjects = () => {
     return (
-        <div className="text-left px-16">
+        <div className="text-left px-6 lg:px-16">
             <div class="relative flex items-center font-title text-3xl">
                 <div class="flex-grow border-t border-prime-blue border-4"></div>
                 <span class="flex-shrink mx-4">Coding Projects</span>
