@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "0.1.0",
-  "homepage": "https://skmoreland.github.io/personal-site/",
+  "homepage": "www.skmoreland.com",
   "private": true,
   "dependencies": {
     "@next/font": "^13.4.3",
