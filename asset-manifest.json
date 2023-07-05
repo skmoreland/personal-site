@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/personal-site/static/css/main.31f2e3e9.css",
-    "main.js": "/personal-site/static/js/main.f74733a1.js",
-    "static/js/787.3ba5e41c.chunk.js": "/personal-site/static/js/787.3ba5e41c.chunk.js",
-    "static/media/profile-pic-2.png": "/personal-site/static/media/profile-pic-2.4826df07bdb55dd17984.png",
-    "static/media/envelope.png": "/personal-site/static/media/envelope.ee870cac4153bd9983a6.png",
-    "static/media/topleft-graphic.png": "/personal-site/static/media/topleft-graphic.e5d24767eca6ac69e750.png",
-    "static/media/topright-graphic.png": "/personal-site/static/media/topright-graphic.dad11f150756098e346d.png",
-    "index.html": "/personal-site/index.html",
-    "main.31f2e3e9.css.map": "/personal-site/static/css/main.31f2e3e9.css.map",
-    "main.f74733a1.js.map": "/personal-site/static/js/main.f74733a1.js.map",
-    "787.3ba5e41c.chunk.js.map": "/personal-site/static/js/787.3ba5e41c.chunk.js.map"
+    "main.css": "/www.skmoreland.com/static/css/main.31f2e3e9.css",
+    "main.js": "/www.skmoreland.com/static/js/main.43f21ffe.js",
+    "static/js/787.3ba5e41c.chunk.js": "/www.skmoreland.com/static/js/787.3ba5e41c.chunk.js",
+    "static/media/profile-pic-2.png": "/www.skmoreland.com/static/media/profile-pic-2.4826df07bdb55dd17984.png",
+    "static/media/envelope.png": "/www.skmoreland.com/static/media/envelope.ee870cac4153bd9983a6.png",
+    "static/media/topleft-graphic.png": "/www.skmoreland.com/static/media/topleft-graphic.e5d24767eca6ac69e750.png",
+    "static/media/topright-graphic.png": "/www.skmoreland.com/static/media/topright-graphic.dad11f150756098e346d.png",
+    "index.html": "/www.skmoreland.com/index.html",
+    "main.31f2e3e9.css.map": "/www.skmoreland.com/static/css/main.31f2e3e9.css.map",
+    "main.43f21ffe.js.map": "/www.skmoreland.com/static/js/main.43f21ffe.js.map",
+    "787.3ba5e41c.chunk.js.map": "/www.skmoreland.com/static/js/787.3ba5e41c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31f2e3e9.css",
-    "static/js/main.f74733a1.js"
+    "static/js/main.43f21ffe.js"
   ]
 }
