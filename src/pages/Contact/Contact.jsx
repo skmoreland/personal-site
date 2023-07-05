@@ -3,7 +3,7 @@ import envelope from '../../assets/images/envelope.png'
 function Contact() {
     return (
     <div className="Contact">
-        <div className="pt-12 mx-96">
+        <div className="pt-12 mx-8 lg:mx-96">
         <div class="relative flex items-center font-title text-3xl">
                 <div class="flex-grow border-t border-black border-2"></div>
                 <span class="flex-shrink mx-4">Contact Me</span>

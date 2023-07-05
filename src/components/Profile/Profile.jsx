@@ -2,9 +2,9 @@ import profile_pic from '../../assets/images/profile-pic-2.png'
 
 const Profile = () => {
     return (
-        <div className="flex items-center font-body justify-center">
+        <div className="font-body space-y-8 lg:space-y-0 lg:flex lg:items-center lg:justify-center">
             <img src={profile_pic} alt="profile" className="min-w-[200px] w-1/5 mr-16 border-black border-8 rounded-lg"/>
-            <div className="text-left w-5/12">
+            <div className="text-left lg:w-5/12">
                 <h1 className="font-title text-4xl decoration-prime-red underline decoration-4 underline-offset-4">About Me</h1>
                 <div className="text-lg">
                     <br />

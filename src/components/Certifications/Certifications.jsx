@@ -1,8 +1,8 @@
-const img_size = "h-48 w-48"
+const img_size = "h-60 lg:h-48 lg:w-48"
 
 const Certifications = () => {
     return (
-        <div>
+        <div className="px-4">
             <div class="relative flex items-center font-title text-3xl">
                 <div class="flex-grow border-t border-prime-blue border-4"></div>
                 <span class="flex-shrink mx-4">Certifications</span>
