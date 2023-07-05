@@ -30,8 +30,12 @@ const SentenceEmbeddingDescription =
 
 const CodingProjects = () => {
     return (
-        <div className="text-left px-16 divide-y divide-black">
-            <h1 className="font-title text-3xl">Coding Projects</h1>
+        <div className="text-left px-16">
+            <div class="relative flex items-center font-title text-3xl">
+                <div class="flex-grow border-t border-prime-blue border-4"></div>
+                <span class="flex-shrink mx-4">Coding Projects</span>
+                <div class="flex-grow border-t border-prime-blue border-4"></div>
+            </div>
             <div className = "projects space-y-4 divide-y">
                 <Experience title="SOCIAL MEDIA SITE – AWS, TERRAFORM, JAVASCRIPT" subtitle="Slalom Cloud Residency" description={SocialMediaDescription}/>
                 <Experience title="INVENTORY SITE – AWS, JAVASCRIPT" subtitle="Slalom Cloud Residency" description={InventorySiteDescription}/>

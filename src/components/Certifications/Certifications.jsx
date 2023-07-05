@@ -2,8 +2,12 @@ const img_size = "h-48 w-48"
 
 const Certifications = () => {
     return (
-        <div className="divide-y divide-black">
-            <h1 className="font-title text-3xl">Certifications</h1>
+        <div>
+            <div class="relative flex items-center font-title text-3xl">
+                <div class="flex-grow border-t border-prime-blue border-4"></div>
+                <span class="flex-shrink mx-4">Certifications</span>
+                <div class="flex-grow border-t border-prime-blue border-4"></div>
+            </div>
             <div className="flex flex-col items-center pt-4 space-y-8">
                 <a href="https://www.credly.com/badges/05a4f32a-f056-4d57-9914-7f78a084122f/public_url" target="_blank" rel="noreferrer noopener">
                     <img src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="Cloud Practitioner" className={img_size}/>
