@@ -10,7 +10,7 @@ function Home() {
             <img className="w-1/2 lg:w-2/12" src={topLeftGraphic} alt=""/>
             <img className="w-1/2 lg:w-2/12" src={topRightGraphic} alt=""/>
         </div>
-        <div className="py-16 px-16 -mt-12 lg:-mt-32">
+        <div className="py-16 px-8 -mt-12 lg:px-16 lg:-mt-32">
           <Profile />
         </div>
         </div>
