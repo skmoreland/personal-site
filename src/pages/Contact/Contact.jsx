@@ -23,7 +23,7 @@ function Contact() {
                 <h1>skmoreland217@gmail.com</h1>
                 <a 
                     className="hover:text-prime-blue"
-                    href="https://drive.google.com/file/d/1_HMjQy-ygIu-hI8jKOGcsc5rwOSVmb6z/view" 
+                    href="https://drive.google.com/file/d/1WbcnNGS9OaEU8T4KR1sMP0_ORgHlBQ6y/view" 
                     target="_blank" 
                     rel="noreferrer noopener">
                         <b>Resume</b>
