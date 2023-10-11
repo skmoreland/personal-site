@@ -21,7 +21,7 @@ function Contact() {
                     <div>
                         <a 
                             className="hover:text-prime-blue"
-                            href="https://drive.google.com/file/d/1WbcnNGS9OaEU8T4KR1sMP0_ORgHlBQ6y/view" 
+                            href="https://drive.google.com/file/d/1rmo_dWaCJtSVqcJYSpClBNTffoZfD9a3/view" 
                             target="_blank" 
                             rel="noreferrer noopener">
                                 <b>Resume</b>
