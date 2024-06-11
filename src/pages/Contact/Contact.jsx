@@ -5,7 +5,7 @@ function Contact() {
     <div className="Contact">
         <div className="pt-12 mx-8 lg:mx-[400px]">
             <div class="relative flex items-center 
-                        font-title text-3xl">
+                        font-title text-4xl">
                 <div class="flex-grow 
                             border-t border-black border-2" />
                 <span class="flex-shrink mx-4">Contact Me</span>
