@@ -35,6 +35,13 @@ const MopheadSiteDescription =
         <li>Added a secure contact form that pushes an email to the artist using EmailJS while protecting their email address</li>
     </ul>
 
+const C2CSiteDescription = 
+    <ul className="list-disc font-body text-base pl-4">
+        <li>Collaborated with the College to Climate team on creating a cohesive brand for their startup</li>
+        <li>Designed the front-end of a multi-page static site that is easy to navigate and that communicates the client’s mission</li>
+        <li>Leveraged Webflow classes to create a cohesive and consistent user interface</li>
+    </ul>
+
 const CodingProjects = () => {
     return (
         <div className="text-left px-6 lg:px-16">
@@ -44,7 +51,16 @@ const CodingProjects = () => {
                 <div class="flex-grow border-t border-prime-blue border-4"></div>
             </div>
             <div className = "projects space-y-4 divide-y">
-                <Experience title="INDEPENDENT ARTIST SITE - REACT, JAVASCRIPT" subtitle="Freelance Web Development" description={MopheadSiteDescription}/>
+                <div>
+                    <a href="https://www.collegetoclimate.co/" target="_blank" rel="noreferrer">
+                        <Experience title="COLLEGE TO CLIMATE SITE - WEBFLOW" subtitle="Freelance Web Development" description={C2CSiteDescription}/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/skmoreland/mophead-site" target="_blank" rel="noreferrer">
+                        <Experience title="INDEPENDENT ARTIST SITE - REACT, JAVASCRIPT" subtitle="Freelance Web Development" description={MopheadSiteDescription}/>
+                    </a>
+                </div>
                 <Experience title="SOCIAL MEDIA SITE – AWS, TERRAFORM, JAVASCRIPT" subtitle="Slalom Cloud Residency" description={SocialMediaDescription}/>
                 <Experience title="INVENTORY SITE – AWS, JAVASCRIPT" subtitle="Slalom Cloud Residency" description={InventorySiteDescription}/>
                 <Experience title="SEARCH ENGINE – PYTHON" subtitle="Information Retrieval Course" description={SearchEngineDescription}/>
