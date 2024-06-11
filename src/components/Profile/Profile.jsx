@@ -19,9 +19,8 @@ const Profile = () => {
                     </p>
                     <br />
                     <p>
-                        Outside of work, I enjoy playing music with my friends. I am currently working on learning the electric guitar but I also love sitting down
-                        at my keyboard or getting out to see live music. I have been really loving the Boston music scene!
-                        I also enjoy watching movies, taking care of my plants, and cooking.
+                        Outside of work, I enjoy working with modeling clay and making stop motion shorts. I also work part-time at a local
+                        independent theater where I am able to explore and share my interests in film.
                     </p>
                 </div>
             </div>
