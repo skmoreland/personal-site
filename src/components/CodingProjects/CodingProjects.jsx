@@ -94,8 +94,25 @@ const boxConnectorDescription = (
       two weeks, forming a more optimal and robust code base
     </li>
     <li>
-      Designed detailed architecture diagrams to better document and communicate
-      the functionality of the app
+      Coded an interface and back-end methods to allow users to rename their Box
+      files and folders within the integration
+    </li>
+  </ul>
+);
+
+const experienceCloudDescription = (
+  <ul className="list-disc font-body text-base pl-4">
+    <li>
+      Wrote SOQL queries and Apex classes to populate custom graphs built using
+      Javascript and ChartJS HTML elements
+    </li>
+    <li>
+      Created lightning web components and Apex methods to allow portal users to
+      update Salesforce records
+    </li>
+    <li>
+      Designed an easy to navigate interface that responded to user’s profile
+      permissions and the client’s specifications
     </li>
   </ul>
 );
@@ -122,6 +139,11 @@ const CodingProjects = () => {
             />
           </a>
         </div>
+        <Experience
+          title="SALESFORCE EXPERIENCE CLOUD SITE – JAVASCRIPT, APEX, SALESFORCE"
+          subtitle="Eustace Consulting"
+          description={experienceCloudDescription}
+        />
         <div>
           <a
             href="https://github.com/skmoreland/mophead-site"

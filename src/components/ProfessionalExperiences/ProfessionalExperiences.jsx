@@ -12,8 +12,8 @@ const eustaceDescription = (
       implementing Hubspot marketing tools
     </li>
     <li>
-      Wrote SOQL queries and Apex classes to populate custom graphs built using
-      javascript and ChartJS HTML elements
+      Headed the configuration of clients’ Hubspot layouts, properties, and
+      automations to best serve their business needs
     </li>
   </ul>
 );
