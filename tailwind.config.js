@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       title: ['Bebas Neue', 'Helvetica', 'Arial','sans-serif'],
       body: ['Oswald','sans-serif'],
+      windows: ['MSSansSerif']
     },
     extend: {
       colors: {
@@ -13,7 +14,10 @@ module.exports = {
         'tan-green': '#F0F3E5',
         'prime-blue': '#0000FF',
         'prime-yellow': '#FFFF00',
-        'prime-red': '#FF0000'
+        'prime-red': '#FF0000',
+        'windows-blue': '#010082',
+        'windows-gray': '#c0c0c0',
+        'windows-dark-gray': '#797d79'
       }
     },
   },

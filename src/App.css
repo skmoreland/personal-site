@@ -5,6 +5,10 @@
 
 .App {
   text-align: center;
+  background-image: url('./assets/images/image.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .App-logo {
@@ -33,11 +37,26 @@
   color: #61dafb;
 }
 
+p a {
+  color: blue;
+  text-decoration: underline;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'MSSansSerif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonts/MS\ Sans\ Serif\ 8pt.ttf) format('TrueType');
   }
 }

@@ -1,14 +1,14 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
 import AppRouter from './AppRouter'
 import React from "react";
 import { BrowserRouter } from 'react-router-dom';
+import WindowsNav from './components/WindowsNav/WindowsNav';
 
 function App() {
   return (
     <BrowserRouter baseline="/">
       <div className="App">
-        <NavBar />
+        <WindowsNav />
         <AppRouter />
       </div>
     </BrowserRouter>
