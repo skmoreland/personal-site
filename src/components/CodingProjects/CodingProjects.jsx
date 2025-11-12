@@ -1,5 +1,9 @@
 import React from "react";
+import { render } from "@testing-library/react";
 import Experience from "../Experience/Experience";
+import { Frame, TreeView, Tabs, Tab } from "react95";
+import { ThemeProvider } from "styled-components";
+import { Video } from "@react95/core";
 
 const socialMediaDescription = (
   <ul className="list-disc font-body text-base pl-4">
@@ -117,6 +121,62 @@ const experienceCloudDescription = (
   </ul>
 );
 
+const categories = [
+  {
+    id: "beverages",
+    label: "Beverages",
+    icon: <>🥤</>,
+    items: [
+      {
+        id: "juices",
+        label: "Juices",
+        icon: <>🧃</>,
+        items: [
+          { id: "apple-juice", label: "Apple juice", icon: <>🍎</> },
+          { id: "orange-juice", label: "Orange juice", icon: <>🍊</> },
+          { id: "strawberry-juice", label: "Strawberry juice", icon: <>🍓</> },
+        ],
+      },
+      {
+        id: "coffee",
+        label: "Coffee",
+        icon: <>☕</>,
+        items: [
+          { id: "latte", label: "Latte", icon: <>☕</> },
+          { id: "espresso", label: "Espresso", icon: <>☕</> },
+        ],
+      },
+    ],
+  },
+  {
+    id: "dairy",
+    label: "Dairy",
+    icon: <>🧈</>,
+    items: [
+      {
+        id: "cheeses",
+        label: "Cheeses",
+        icon: <>🧀</>,
+        items: [
+          { id: "goat-cheese", label: "Goat cheese", icon: <>🧀</> },
+          { id: "camembert-cheese", label: "Camembert", icon: <>🧀</> },
+          { id: "cheddar-cheese", label: "Cheddar", icon: <>🧀</> },
+        ],
+      },
+      {
+        id: "milk",
+        label: "Milk",
+        icon: <>🥛</>,
+        items: [
+          { id: "cow-milk", label: "Cow Milk", icon: <>🐄</> },
+          { id: "soya-milk", label: "Soya milk", icon: <>🥛</> },
+          { id: "oat-milk", label: "Oat milk", icon: <>🥛</> },
+        ],
+      },
+    ],
+  },
+];
+
 const CodingProjects = () => {
   return (
     <div className="text-left px-6 lg:px-16">
@@ -183,18 +243,3 @@ const CodingProjects = () => {
 };
 
 export default CodingProjects;
-
-/*
-  <div>
-        <a href="https://www.collegetoclimate.co/" target="_blank" rel="noreferrer">
-            <Experience title="COLLEGE TO CLIMATE SITE - WEBFLOW" subtitle="Freelance Web Development" description={C2CSiteDescription}/>
-        </a>
-    </div>
-  */
-
-// const c2cSiteDescription =
-//     <ul className="list-disc font-body text-base pl-4">
-//         <li>Collaborated with the College to Climate team on creating a cohesive brand for their startup</li>
-//         <li>Designed the front-end of a multi-page static site that is easy to navigate and that communicates the client’s mission</li>
-//         <li>Leveraged Webflow classes to create a cohesive and consistent user interface</li>
-//     </ul>

@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     fontFamily: {
-      title: ['Bebas Neue', 'Helvetica', 'Arial','sans-serif'],
-      body: ['Oswald','sans-serif'],
+      title: ['MSSansSerif'],
+      body: ['MSSansSerif'],
       windows: ['MSSansSerif']
     },
     extend: {
