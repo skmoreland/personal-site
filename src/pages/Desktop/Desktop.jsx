@@ -6,7 +6,6 @@ import mail from "../../assets/images/windows-envelope.png";
 import AboutMe from "../../components/WindowContent/AboutMe";
 import ContactMe from "../../components/WindowContent/ContactMe";
 import ExperienceDesktop from "../../components/WindowContent/ExperienceDesktop";
-
 const Desktop = () => {
   return (
     <div className="max-h-screen relative">
@@ -14,7 +13,7 @@ const Desktop = () => {
       <Window
         title="About Me"
         titleIcon={lightbulb}
-        folderPosition={{ bottom: 32, left: 32 }}
+        folderPosition={{ top: 64, left: 32 }} // 48px nav + 16px padding
         defaultOpen={true}
         defaultWidth={850}
       >
@@ -25,7 +24,7 @@ const Desktop = () => {
       <Window
         title="Experience"
         titleIcon={briefcase}
-        folderPosition={{ bottom: 32, left: 120 }}
+        folderPosition={{ top: 142, left: 32 }} // 64 + ~78px per folder
         defaultOpen={false}
       >
         <ExperienceDesktop />
@@ -35,7 +34,7 @@ const Desktop = () => {
       <Window
         title="Contact"
         titleIcon={mail}
-        folderPosition={{ bottom: 32, left: 208 }}
+        folderPosition={{ top: 220, left: 32 }}
         defaultOpen={false}
         defaultWidth={500}
       >

@@ -10,9 +10,11 @@ const Window = ({
   titleIcon,
   folderLabel,
   defaultWidth = 500,
+  defaultHeight = "auto",
+  maxHeight = null,
   defaultOpen = true,
   defaultPosition = null,
-  folderPosition = { bottom: 32, left: 32 },
+  folderPosition = { top: 32, left: 32 },
   zIndex = 1,
   onFocus,
   nestedMode = false,
@@ -21,26 +23,49 @@ const Window = ({
   const [isVisible, setIsVisible] = useState(defaultOpen);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [size, setSize] = useState({ width: defaultWidth, height: "auto" });
+  const [size, setSize] = useState({
+    width: defaultWidth,
+    height: defaultHeight,
+  });
   const [preMaximize, setPreMaximize] = useState({
     position: { x: 0, y: 0 },
-    size: { width: defaultWidth, height: "auto" },
+    size: { width: defaultWidth, height: defaultHeight },
   });
 
+  // Check for mobile on mount and resize
   useEffect(() => {
-    if (defaultPosition) {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Set initial position and size
+  useEffect(() => {
+    if (isMobile) {
+      setPosition({ x: 0, y: 0 });
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    } else if (defaultPosition) {
       setPosition(defaultPosition);
+      setSize({ width: defaultWidth, height: defaultHeight });
     } else {
-      const x = (window.innerWidth - size.width) / 2;
+      const x = (window.innerWidth - defaultWidth) / 2;
       const y = window.innerHeight * 0.1;
       setPosition({ x, y });
+      setSize({ width: defaultWidth, height: defaultHeight });
     }
-  }, [defaultPosition, size]);
+  }, [isMobile, defaultPosition, defaultWidth, defaultHeight]);
 
   const handleMinimize = () => setIsMinimized(true);
 
   const handleMaximize = () => {
+    if (isMobile) return; // No maximize on mobile, already full screen
+
     if (isMaximized) {
       setPosition(preMaximize.position);
       setSize(preMaximize.size);
@@ -67,7 +92,42 @@ const Window = ({
 
   const isWindowOpen = isVisible && !isMinimized;
 
-  const windowContent = (
+  // Mobile: render as full-screen modal
+  const mobileWindow = (
+    <div
+      className="fixed left-0 right-0 bottom-0 bg-windows-gray flex flex-col"
+      style={{ top: 48, zIndex: nestedMode ? 100 : zIndex }} // 48px for nav
+    >
+      {/* Title bar */}
+      <div className="flex items-center justify-between w-full bg-windows-dark-gray text-white p-1 select-none">
+        <div className="flex items-center gap-x-2">
+          {titleIcon && <img src={titleIcon} alt="" className="w-4 h-4" />}
+          <span className="font-windows text-sm">{title}</span>
+        </div>
+        <div className="flex gap-0.5">
+          <button
+            onClick={handleMinimize}
+            className="w-6 h-6 bg-windows-gray border-t border-l border-white border-b-2 border-r-2 border-b-gray-800 border-r-gray-800 flex items-center justify-center text-black font-bold text-xs hover:bg-gray-300"
+          >
+            _
+          </button>
+          <button
+            onClick={handleClose}
+            className="w-6 h-6 bg-windows-gray border-t border-l border-white border-b-2 border-r-2 border-b-gray-800 border-r-gray-800 flex items-center justify-center text-black font-bold text-xs hover:bg-gray-300"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-4 text-black font-windows overflow-auto flex-1">
+        {children}
+      </div>
+    </div>
+  );
+  // Desktop: render with Rnd
+  const desktopWindow = (
     <Rnd
       size={size}
       position={position}
@@ -81,9 +141,10 @@ const Window = ({
       disableDragging={isMaximized}
       minWidth={300}
       minHeight={100}
+      maxHeight={maxHeight}
       style={{ zIndex: nestedMode ? 100 : zIndex }}
     >
-      <div className="bg-windows-gray border-t-2 border-l-2 border-white border-b border-r h-full flex flex-col max-h-[700px]">
+      <div className="bg-windows-gray border-t-2 border-l-2 border-white border-b border-r h-full flex flex-col max-h-[800px]">
         {/* Title bar */}
         <div className="title-bar flex items-center justify-between w-full bg-windows-dark-gray text-white p-1 cursor-move select-none">
           <div className="flex items-center gap-x-2">
@@ -120,6 +181,8 @@ const Window = ({
     </Rnd>
   );
 
+  const windowContent = isMobile ? mobileWindow : desktopWindow;
+
   return (
     <>
       {/* Folder icon */}
@@ -129,11 +192,7 @@ const Window = ({
         style={
           nestedMode
             ? {}
-            : {
-                bottom: folderPosition.bottom,
-                left: folderPosition.left,
-                zIndex: 0,
-              }
+            : { top: folderPosition.top, left: folderPosition.left, zIndex: 0 }
         }
       >
         <img
@@ -141,12 +200,12 @@ const Window = ({
           alt="folder"
           className="w-12 h-12"
         />
-        <span className="text-white text-xs font-windows">
+        <span className="text-black text-xs font-windows">
           {folderLabel || title}
         </span>
       </button>
 
-      {/* Window - use portal for nested mode to escape parent overflow */}
+      {/* Window */}
       {isWindowOpen &&
         (nestedMode
           ? createPortal(windowContent, document.body)

@@ -3,7 +3,7 @@ import lucy from "../../assets/images/me-and-lucy.jpg";
 const AboutMe = () => {
   return (
     <div className="p-4 text-black text-left font-windows overflow-auto flex-1">
-      <img src={lucy} alt="me and cat" className="w-3/5" />
+      <img src={lucy} alt="me and cat" className="lg:w-3/5 sm:4/5" />
       <br />
       <p className="text-xl">
         <b>Welcome to my page!</b>
