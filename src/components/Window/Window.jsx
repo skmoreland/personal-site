@@ -188,7 +188,7 @@ const Window = ({
       {/* Folder icon */}
       <button
         onClick={handleFolderClick}
-        className={`flex flex-col items-center gap-1 cursor-pointer ${nestedMode ? "" : "fixed"}`}
+        className={`flex flex-col items-center gap-1 w-16 cursor-pointer ${nestedMode ? "" : "fixed"}`}
         style={
           nestedMode
             ? {}
@@ -199,6 +199,7 @@ const Window = ({
           src={isWindowOpen ? folderOpen : folderClosed}
           alt="folder"
           className="w-12 h-12"
+          role="button"
         />
         <span className="text-black text-xs font-windows">
           {folderLabel || title}

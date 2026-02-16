@@ -11,7 +11,7 @@ const ExperienceDesktop = () => {
           titleIcon={mail}
           defaultOpen={false} // force it open
           defaultPosition={{ x: 100, y: 100 }} // explicit position
-          defaultWidth={600}
+          defaultWidth={700}
           nestedMode={true}
         >
           <ProfessionalExperience />
@@ -20,7 +20,7 @@ const ExperienceDesktop = () => {
           title="Coding Projects"
           titleIcon={mail}
           defaultOpen={false}
-          defaultWidth={500}
+          defaultWidth={700}
           nestedMode={true}
         >
           <CodingProjects />

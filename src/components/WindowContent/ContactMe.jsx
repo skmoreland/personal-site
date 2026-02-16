@@ -14,8 +14,14 @@ const ContactMe = () => {
             href="mailto:skmoreland217@gmail.com"
             target="_blank"
             rel="noreferrer noopener"
+            role="button"
           >
-            <img src={envelope} alt="envelope" className="w-1/12 min-w-12" />
+            <img
+              src={envelope}
+              alt="envelope"
+              role="button"
+              className="w-1/12 min-w-12"
+            />
             <b>Email</b>
           </a>
           <a
@@ -24,7 +30,12 @@ const ContactMe = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <img src={file} alt="envelope" className="w-1/12 min-w-12" />
+            <img
+              src={file}
+              alt="envelope"
+              role="button"
+              className="w-1/12 min-w-12"
+            />
             <b>Resume</b>
           </a>
           <a
@@ -33,7 +44,12 @@ const ContactMe = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <img src={network} alt="envelope" className="w-1/12 min-w-12" />
+            <img
+              src={network}
+              alt="envelope"
+              role="button"
+              className="w-1/12 min-w-12"
+            />
             <b>LinkedIn</b>
           </a>
           <a
@@ -42,7 +58,12 @@ const ContactMe = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <img src={computers} alt="computers" className="w-1/12 min-w-12" />
+            <img
+              src={computers}
+              alt="computers"
+              role="button"
+              className="w-1/12 min-w-12"
+            />
             <b>GitHub</b>
           </a>
         </div>
