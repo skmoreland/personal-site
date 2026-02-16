@@ -1,9 +1,4 @@
-import React from "react";
-import { render } from "@testing-library/react";
 import Experience from "../Experience/Experience";
-import { Frame, TreeView, Tabs, Tab } from "react95";
-import { ThemeProvider } from "styled-components";
-import { Video } from "@react95/core";
 
 const socialMediaDescription = (
   <ul className="list-disc font-body text-base pl-4">
@@ -121,120 +116,48 @@ const experienceCloudDescription = (
   </ul>
 );
 
-const categories = [
-  {
-    id: "beverages",
-    label: "Beverages",
-    icon: <>🥤</>,
-    items: [
-      {
-        id: "juices",
-        label: "Juices",
-        icon: <>🧃</>,
-        items: [
-          { id: "apple-juice", label: "Apple juice", icon: <>🍎</> },
-          { id: "orange-juice", label: "Orange juice", icon: <>🍊</> },
-          { id: "strawberry-juice", label: "Strawberry juice", icon: <>🍓</> },
-        ],
-      },
-      {
-        id: "coffee",
-        label: "Coffee",
-        icon: <>☕</>,
-        items: [
-          { id: "latte", label: "Latte", icon: <>☕</> },
-          { id: "espresso", label: "Espresso", icon: <>☕</> },
-        ],
-      },
-    ],
-  },
-  {
-    id: "dairy",
-    label: "Dairy",
-    icon: <>🧈</>,
-    items: [
-      {
-        id: "cheeses",
-        label: "Cheeses",
-        icon: <>🧀</>,
-        items: [
-          { id: "goat-cheese", label: "Goat cheese", icon: <>🧀</> },
-          { id: "camembert-cheese", label: "Camembert", icon: <>🧀</> },
-          { id: "cheddar-cheese", label: "Cheddar", icon: <>🧀</> },
-        ],
-      },
-      {
-        id: "milk",
-        label: "Milk",
-        icon: <>🥛</>,
-        items: [
-          { id: "cow-milk", label: "Cow Milk", icon: <>🐄</> },
-          { id: "soya-milk", label: "Soya milk", icon: <>🥛</> },
-          { id: "oat-milk", label: "Oat milk", icon: <>🥛</> },
-        ],
-      },
-    ],
-  },
-];
-
 const CodingProjects = () => {
   return (
-    <div className="text-left px-6 lg:px-16">
-      <div class="relative flex items-center font-title text-4xl">
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
-        <span class="flex-shrink mx-4">Coding Projects</span>
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
+    <div className="text-left px-6">
+      <div className="relative flex items-center font-title text-3xl underline">
+        Coding Projects
       </div>
-      <div className="projects space-y-4 divide-y">
-        <div>
-          <a
-            href="https://sparkgridsoftware.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Experience
-              title="BOX CONNECTOR APP – TS, POSTGRES, HUBSPOT API, BOX SDK"
-              subtitle="Sparkgrid Software"
-              description={boxConnectorDescription}
-            />
-          </a>
-        </div>
+      <div className="projects space-y-4">
         <Experience
-          title="SALESFORCE EXPERIENCE CLOUD SITE – JAVASCRIPT, APEX, SALESFORCE"
-          subtitle="Eustace Consulting"
+          title="BOX CONNECTOR APP"
+          subtitle="TS, POSTGRES, HUBSPOT API, BOX SDK - Sparkgrid Software"
+          description={boxConnectorDescription}
+          link="https://sparkgridsoftware.com/"
+        />
+        <Experience
+          title="SALESFORCE EXPERIENCE CLOUD SITE"
+          subtitle="JAVASCRIPT, APEX, SALESFORCE - Eustace Consulting"
           description={experienceCloudDescription}
         />
-        <div>
-          <a
-            href="https://github.com/skmoreland/mophead-site"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Experience
-              title="INDEPENDENT ARTIST SITE - REACT, JAVASCRIPT"
-              subtitle="Freelance Web Development"
-              description={mopheadSiteDescription}
-            />
-          </a>
-        </div>
         <Experience
-          title="SOCIAL MEDIA SITE – AWS, TERRAFORM, JAVASCRIPT"
-          subtitle="Slalom Cloud Residency"
+          title="INDEPENDENT ARTIST SITE"
+          subtitle="REACT, JAVASCRIPT - Freelance Web Development"
+          description={mopheadSiteDescription}
+          link="https://github.com/skmoreland/mophead-site"
+        />
+        <Experience
+          title="SOCIAL MEDIA SITE"
+          subtitle="AWS, TERRAFORM, JAVASCRIPT - Slalom Cloud Residency"
           description={socialMediaDescription}
         />
         <Experience
-          title="INVENTORY SITE – AWS, JAVASCRIPT"
-          subtitle="Slalom Cloud Residency"
+          title="INVENTORY SITE"
+          subtitle="AWS, JAVASCRIPT - Slalom Cloud Residency"
           description={inventorySiteDescription}
         />
         <Experience
-          title="SEARCH ENGINE – PYTHON"
-          subtitle="Information Retrieval Course"
+          title="SEARCH ENGINE"
+          subtitle="PYTHON - Information Retrieval Course"
           description={searchEngineDescription}
         />
         <Experience
-          title="SENTENCE EMBEDDING, K-MEANS CLUSTERING – PYTHON"
-          subtitle="Federal Reserve Board Internship"
+          title="SENTENCE EMBEDDING, K-MEANS CLUSTERING"
+          subtitle="PYTHON - Federal Reserve Board Internship"
           description={sentenceEmbeddingDescription}
         />
       </div>

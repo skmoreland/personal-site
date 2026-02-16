@@ -4,16 +4,29 @@ import Experience from "../Experience/Experience";
 const eustaceDescription = (
   <ul className="list-disc font-body text-base pl-4">
     <li>
-      Led the design and deployment of automated CRM solutions with complex data
-      pipelines in Salesforce and Hubspot
+      Lead the design and deployment of automated CRM solutions with complex
+      data pipelines in Salesforce and Hubspot
     </li>
     <li>
-      Increased the creation of lead generation data by recommending and
+      Increase the creation of lead generation data by recommending and
       implementing Hubspot marketing tools
     </li>
     <li>
-      Headed the configuration of clients’ Hubspot layouts, properties, and
-      automations to best serve their business needs
+      Develop API integrations with Salesforce, enabling clients to connect
+      their payment and accounting systems
+    </li>
+  </ul>
+);
+
+const boxConnectorDescription = (
+  <ul className="list-disc font-body text-base pl-4">
+    <li>
+      Design and facilitate an efficient QA process to outline extensive testing
+      scenarios and locate critical bugs
+    </li>
+    <li>
+      Collaborate with a team of engineers to plan out quarterly goals based on
+      team capacity and skill sets
     </li>
   </ul>
 );
@@ -110,56 +123,47 @@ const fedDescription = (
 
 const ProfessionalExperience = () => {
   return (
-    <div className="text-left px-6 lg:px-16">
-      <div class="relative flex items-center font-title text-4xl">
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
-        <span class="flex-shrink mx-4">Professional Experience</span>
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
+    <div className="text-left px-6 ">
+      <div className="relative flex items-center font-title text-3xl underline">
+        Professional Experience
       </div>
-      <div className="projects space-y-4 divide-y">
+      <div className="projects space-y-4">
         <div>
-          <a
-            href="https://eustaceconsulting.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Experience
-              title="Eustace Consulting"
-              subtitle="Software Developer"
-              description={eustaceDescription}
-            />
-          </a>
+          <Experience
+            title="Eustace Consulting"
+            subtitle="Software Developer, Aug. 2024 - Present"
+            description={eustaceDescription}
+            link="https://eustaceconsulting.com/"
+          />
         </div>
         <div>
-          <a
-            href="https://www.collegetoclimate.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Experience
-              title="College to Climate"
-              subtitle="Web Developer"
-              description={c2cDescription}
-            />
-          </a>
+          <Experience
+            title="Sparkgrid Software"
+            subtitle="Project Manager Dec. 2024 - Present"
+            description={boxConnectorDescription}
+            link="https://www.sparkgridsoftware.com/"
+          />
         </div>
         <div>
-          <a
-            href="https://www.slalom.com/us/en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Experience
-              title="Slalom Consulting"
-              subtitle="Associate Consultant"
-              description={slalomDescription}
-            />
-          </a>
+          <Experience
+            title="College to Climate"
+            subtitle="Web Developer, Apr. 2024 - Present"
+            description={c2cDescription}
+            link="https://www.collegetoclimate.co/"
+          />
+        </div>
+        <div>
+          <Experience
+            title="Slalom Consulting"
+            subtitle="Associate Consultant, June 2022 - Sept. 2023"
+            description={slalomDescription}
+            link="https://www.slalom.com/us/en"
+          />
         </div>
 
         <Experience
           title="Federal Reserve Board"
-          subtitle="Software Engineering Intern"
+          subtitle="Software Engineering Intern, June 2021 - Aug.202"
           description={fedDescription}
         />
       </div>

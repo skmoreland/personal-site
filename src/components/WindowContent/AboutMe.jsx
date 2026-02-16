@@ -1,10 +1,8 @@
-import lightbulb from "../../assets/images/lightbulb.svg";
 import lucy from "../../assets/images/me-and-lucy.jpg";
-import Card from "../Card/Card";
 
-const Profile = () => {
-  const content = (
-    <div>
+const AboutMe = () => {
+  return (
+    <div className="p-4 text-black text-left font-windows overflow-auto flex-1">
       <img src={lucy} alt="me and cat" className="w-3/5" />
       <br />
       <p className="text-xl">
@@ -15,7 +13,6 @@ const Profile = () => {
         My name is Sarah Moreland and I am a software engineer based in Boston.
         I'm currently working at{" "}
         <a
-          className=""
           href="https://eustaceconsulting.com/"
           target="_blank"
           rel="noreferrer noopener"
@@ -33,7 +30,6 @@ const Profile = () => {
       <p>
         Currently I am helping develop{" "}
         <a
-          className=""
           href="https://sparkgridsoftware.com/files/"
           target="_blank"
           rel="noreferrer noopener"
@@ -50,12 +46,17 @@ const Profile = () => {
       <p>
         Outside of work, I enjoy working with modeling clay and making stop
         motion shorts. I have been experimenting with the personification of
-        vegetables and fruit! Check it out.
+        vegetables and fruit! Check it{" "}
+        <a
+          href="https://www.youtube.com/@GoopyClayCompany"
+          target="_blank"
+          rel="noreferrer"
+        >
+          out.
+        </a>
       </p>
     </div>
   );
-
-  return <Card content={content} title="About Me" icon={lightbulb} />;
 };
 
-export default Profile;
+export default AboutMe;

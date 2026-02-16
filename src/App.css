@@ -42,6 +42,10 @@ p a {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

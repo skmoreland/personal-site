@@ -1,15 +1,14 @@
 import './App.css';
-import AppRouter from './AppRouter'
-import React from "react";
 import { BrowserRouter } from 'react-router-dom';
 import WindowsNav from './components/WindowsNav/WindowsNav';
+import Desktop from './pages/Desktop/Desktop';
 
 function App() {
   return (
     <BrowserRouter baseline="/">
-      <div className="App">
+      <div className="App h-screen max-h-screen">
         <WindowsNav />
-        <AppRouter />
+        <Desktop />
       </div>
     </BrowserRouter>
   );

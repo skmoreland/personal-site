@@ -5,10 +5,10 @@ const img_size = "h-60 lg:h-48 lg:w-48";
 const Certifications = () => {
   return (
     <div className="px-4">
-      <div class="relative flex items-center font-title text-4xl">
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
-        <span class="flex-shrink mx-4">Certifications</span>
-        <div class="flex-grow border-t border-prime-blue border-4"></div>
+      <div className="relative flex items-center font-title text-4xl">
+        <div className="flex-grow border-t border-prime-blue border-4"></div>
+        <span className="flex-shrink mx-4">Certifications</span>
+        <div className="flex-grow border-t border-prime-blue border-4"></div>
       </div>
       <div className="flex flex-col items-center pt-4 space-y-8">
         <a
