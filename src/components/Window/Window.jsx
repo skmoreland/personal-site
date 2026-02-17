@@ -141,7 +141,7 @@ const Window = ({
       disableDragging={isMaximized}
       minWidth={300}
       minHeight={100}
-      maxHeight={maxHeight}
+      maxHeight={maxHeight ? maxHeight : 1000}
       style={{ zIndex: nestedMode ? 100 : zIndex }}
     >
       <div className="bg-windows-gray border-t-2 border-l-2 border-white border-b border-r h-full flex flex-col max-h-[800px]">
